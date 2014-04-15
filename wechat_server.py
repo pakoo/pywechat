@@ -302,5 +302,5 @@ class Application(tornado.web.Application):
 
 if __name__ == '__main__':
     http_server = tornado.httpserver.HTTPServer(request_callback=Application())
-    http_server.listen(7777)
+    http_server.listen(80)
     tornado.ioloop.IOLoop.instance().start()

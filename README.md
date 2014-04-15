@@ -1,6 +1,7 @@
 python 微信公共号框架 支持多账号
 =======================================
 
+基于tornado
 ### 例子
     class TestApp(BaseRequest):
         """
@@ -28,3 +29,5 @@ python 微信公共号框架 支持多账号
             elif self.event_key == 'key2':
                 self.send_text('1')#回复1
 
+> 运行:sudo python wechat_server.py
+ 
