@@ -29,5 +29,15 @@ python 微信公共号框架 支持多账号
             elif self.event_key == 'key2':
                 self.send_text('1')#回复1
 
+### 配置app
+    class WeChatHandler(tornado.web.RequestHandler):
+        """
+        微信父类
+        """
+        def prepare(self):
+            self.app_list = {
+                    'tousername':{'handler':TestApp,'token':'开发模式里的token'},
+                }
+
 > 运行:sudo python wechat_server.py
  
