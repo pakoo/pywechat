@@ -260,6 +260,13 @@ class WeChatHandler(tornado.web.RequestHandler):
         line = text_tmp%(self.userid,self.myid,int(time.time()),text)
         self.finish(line)
 
+    def send_img(self,mediaid):
+        """
+        回复一张图片
+        """
+        img = img_tmp%(self.userid,self.myid,int(time.time()),mediaid)
+        self.finish(img)
+
     def send_artical(self,title,desc,picurl,url):
         """
         发送单篇文章
